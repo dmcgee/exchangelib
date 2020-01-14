@@ -147,9 +147,9 @@ class EWSElement(object):
 
     def __setattr__(self, key, value):
         # Avoid silently accepting spelling errors to field names that are not set via __init__
-        if not hasattr(self, key) and key not in self._slots_keys():
-            raise AttributeError('%r is not a valid attribute. See %s.FIELDS for valid field names' % (
-                key, self.__class__.__name__))
+        #if not hasattr(self, key) and key not in self._slots_keys():
+        #    raise AttributeError('%r is not a valid attribute. See %s.FIELDS for valid field names' % (
+        #        key, self.__class__.__name__))
         super(EWSElement, self).__setattr__(key, value)
 
     def clean(self, version=None):
